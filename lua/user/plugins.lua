@@ -93,15 +93,14 @@ return packer.startup(function(use)
 	use({ "lewis6991/gitsigns.nvim", commit = "c18e016864c92ecf9775abea1baaa161c28082c3" })
 	
 	-- nvim-surround
-	use({
-    "kylechui/nvim-surround",
-    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
-    config = function()
-        require("nvim-surround").setup({
+	use({ "kylechui/nvim-surround",  tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+		config = function()
+			require("nvim-surround").setup({
             -- Configuration here, or leave empty to use defaults
-        })
-    end
-})
+			})
+		end
+	})
+	use({"mg979/vim-visual-multi",commit = "e23b98a8852255766e54bf7723a9d61fb5ab3143"})
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
